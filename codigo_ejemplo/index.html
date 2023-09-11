@@ -1,18 +1,70 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="/css/style.css">
-    </head>
 
-    <body>
-        <form action="/cgi-bin/index.py" method="get">
-<!--    <form action="/cgi-bin/index.py" method="post"> -->
-            User: <input type="text"     name="user"   ></br>
-            Pass: <input type="password" name="pass"   ></br>
-	          <input type="submit"   value="enviar">
-        </form>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Login Page </title>
+    <style>
+        Body {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        button {
+            background-color: black;
+            width: 100%;
+            color: white;
+            padding: 15px;
+            margin: 10px 0px;
+            border: none;
+            cursor: pointer;
+        }
+
+        form {
+            border: 3px solid black;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            margin: 8px 0;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 2px solid gray;
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            opacity: 0.7;
+        }
+
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            margin: 10px 5px;
+        }
 
 
-        <script src="/js/script.js"></script>
+        .container {
+            padding: 25px;
+            background-color: white;
+        }
+    </style>
+</head>
 
-    </body>
+<body>
+    <center>
+        <h1>Login </h1>
+    </center>
+    <form action="/cgi-bin/index.py" method="get">
+        <div class="container">
+            <label>Username : </label>
+            <input type="text" placeholder="Enter Username" name="user" required>
+            <label>Password : </label>
+            <input type="password" placeholder="Enter Password" name="pass" required>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+    <script src="/js/script-js"></script>
+</body>
+
 </html>
